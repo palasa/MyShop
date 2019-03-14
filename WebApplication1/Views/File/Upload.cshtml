@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="~/File/Upload" enctype="multipart/form-data">
+            <input type="file" name="files" multiple/> <br/>
+            <input type="submit" />
+        </form>
+    </div>
+</body>
+</html>

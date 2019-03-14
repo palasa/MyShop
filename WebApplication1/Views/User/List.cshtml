@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            console.log(1);
+            $('input').click(function () {
+                console.log(2);
+                $.get("/User/UserList", null, function (data) {
+                    console.log(data);
+                    //$.each(data, function (i, user) {
+                    //    $('#userList').append('<div>' + user.Username + '</div>');
+                    //});
+                    $(data).each(function (i, user) {
+                        $('#userList').append('<div>' + user.Username + '</div>');
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div> 
+
+        <input type="button" value="获取用户数据"/>
+        <div id="userList">
+
+        </div>
+    </div>
+</body>
+</html>

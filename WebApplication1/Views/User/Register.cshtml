@@ -1,0 +1,40 @@
+﻿@using WebApplication1.Models
+@model WebApplication1.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $('#Username').blur(function () {
+                $.post("/User/CheckUsername", { "Username": $('#Username').val() })
+                .success(function (data) {
+                    console.log(data)
+                })
+                .error(function () {
+                    alert('不可用')
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div> 
+        <form action="~/User/Register" method="post">
+            用户名：<input id="Username" type="text" name="Username" value="@Request["Username"]"/> @Html.ValidationMessageFor(m=>m.Username) <br/>
+            密码：<input type="password" name="Password" /> @Html.ValidationMessageFor(model=> model.Password) <br />
+            确认密码：<input type="password" name="ConfirmPassword" /> @Html.ValidationMessageFor(model=>model.ConfirmPassword) <br />
+            昵称：<input type="text" name="Nickname" /> <br/>
+            <input type="submit" />
+
+        </form>
+    </div>
+</body>
+</html>

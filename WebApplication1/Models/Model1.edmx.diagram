@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b5cc74e88044ecc93c3e751db1e4fc0" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Address" Width="1.5" PointX="5" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Area" Width="1.5" PointX="2.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductColor" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductImage" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductSize" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ProductType" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="2.75" PointY="11.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Address__AreaId__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Address__UserId__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Area__ParentId__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Product__Product__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Product__Product__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Product__TypeId__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__ProductIm__Produ__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__ProductType__Pid__145C0A3F" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
